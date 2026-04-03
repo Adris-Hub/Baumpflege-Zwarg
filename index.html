@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baumpflege Zwarg | Baumpflege, Baumfällung & Baumkontrolle im Saalekreis</title>
+<meta name="description" content="Baumpflege Zwarg – Fachbetrieb für Baumpflege, Baumfällung, Baumkontrolle und Sturmschäden in Bad Lauchstädt, Saalekreis und bis 100 km Umkreis.">
+<meta name="robots" content="index,follow">
+<style>
+:root{
+  --green:#1f3d2b;
+  --green-2:#163322;
+  --green-3:#2a5a3f;
+  --light:#f4f6f5;
+  --soft:#e8efe9;
+  --text:#222;
+  --muted:#5d6a63;
+  --white:#fff;
+  --red:#b7332a;
+  --shadow:0 10px 28px rgba(0,0,0,.08);
+  --radius:18px;
+  --max:1150px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--light);
+  color:var(--text);
+  line-height:1.6;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+.skip-link{
+  position:absolute;left:-9999px;top:0;background:#fff;color:#000;padding:10px 14px;z-index:999;
+}
+.skip-link:focus{left:10px;top:10px}
+.topbar{
+  background:var(--red);
+  color:#fff;
+  text-align:center;
+  padding:12px 16px;
+  font-weight:700;
+}
+header{
+  background:linear-gradient(135deg,var(--green),var(--green-2));
+  color:#fff;
+  padding:18px 20px;
+}
+.header-inner{
+  max-width:var(--max);
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.logo{
+  width:78px;height:78px;object-fit:contain;background:#fff;border-radius:16px;padding:7px;flex:0 0 auto;
+}
+.brand h1{margin:0;font-size:32px}
+.brand p{margin:4px 0 0;font-weight:700;opacity:.95}
+nav{
+  position:sticky;top:0;z-index:20;
+  background:rgba(22,51,34,.96);
+  backdrop-filter: blur(6px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav-inner{
+  max-width:var(--max);
+  margin:0 auto;
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  padding:12px 20px;
+}
+nav a{color:#fff;text-decoration:none;font-weight:700}
+nav a:hover{text-decoration:underline}
+.hero{
+  background:linear-gradient(rgba(31,61,43,.75), rgba(31,61,43,.72)), url('arbeitsbilder/hero.jpg') center/cover no-repeat;
+  color:#fff;
+  text-align:center;
+  padding:115px 20px 95px;
+}
+.hero-box{max-width:920px;margin:0 auto}
+.hero h2{font-size:50px;line-height:1.12;margin:0 0 14px}
+.hero p{font-size:20px;max-width:760px;margin:0 auto 12px}
+.hero-actions{margin-top:26px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:14px 22px;border-radius:12px;font-weight:700;text-decoration:none;transition:.2s ease;
+}
+.btn-primary{background:#fff;color:var(--green)}
+.btn-primary:hover{transform:translateY(-1px)}
+.btn-secondary{background:transparent;color:#fff;border:2px solid #fff}
+.btn-secondary:hover{background:rgba(255,255,255,.08)}
+main{display:block}
+.section{max-width:var(--max);margin:0 auto;padding:72px 20px}
+.section h3{font-size:34px;margin:0 0 12px;text-align:center;color:var(--green)}
+.section-intro{max-width:790px;margin:0 auto 30px;text-align:center;color:var(--muted)}
+.grid{display:grid;gap:24px}
+.highlights{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:-36px;position:relative;z-index:2}
+.services{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.gallery{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.badges{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.reviews{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card,.badge,.contact-box,.legal-box{
+  background:#fff;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);
+}
+.card h4,.badge strong{color:var(--green)}
+.card h4{margin:0 0 8px;font-size:22px}
+.badge{text-align:center}
+.badge img{width:100%;max-width:260px;height:340px;object-fit:contain;margin:0 auto 12px;background:#fafafa;border-radius:12px}
+.gallery img{width:100%;height:250px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow);background:#fff}
+.review-stars{color:#c79310;font-size:22px;margin-bottom:10px}
+.offer{
+  background:linear-gradient(135deg,var(--green),var(--green-3));
+  color:#fff;border-radius:24px;padding:34px;box-shadow:var(--shadow);
+}
+.form{max-width:780px;margin:24px auto 0}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form input,.form textarea,.form select{
+  width:100%;padding:14px 16px;border-radius:12px;border:1px solid #d8d8d8;font-size:16px;font-family:inherit;
+}
+.form textarea{min-height:150px;resize:vertical}
+.form button{
+  margin-top:14px;background:#fff;color:var(--green);border:none;border-radius:12px;padding:14px 22px;font-size:16px;font-weight:700;cursor:pointer;
+}
+.form .consent{display:flex;gap:10px;align-items:flex-start;margin-top:12px;font-size:14px}
+.form .consent input{width:auto;min-width:18px;margin-top:3px}
+.contact{text-align:center}
+.contact-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.contact-list a{color:var(--green);font-weight:700}
+.map-card{
+  margin-top:22px;padding:20px;background:var(--soft);border-radius:16px;text-align:left;
+}
+.map-card p{margin:0 0 12px}
+.legal-wrap{display:grid;gap:24px}
+.legal-box h4{margin-top:0;color:var(--green)}
+footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top:20px}
+.footer-links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+.footer-links a{color:#fff}
+.small{font-size:14px;opacity:.92}
+.whatsapp{
+  position:fixed;right:18px;bottom:18px;background:#25D366;color:#fff;padding:14px 18px;border-radius:999px;
+  font-weight:700;box-shadow:var(--shadow);text-decoration:none;z-index:19;
+}
+.cookie-banner{
+  position:fixed;left:20px;right:20px;bottom:20px;z-index:30;display:none;
+}
+.cookie-card{
+  max-width:920px;margin:0 auto;background:#fff;border-radius:20px;box-shadow:0 18px 42px rgba(0,0,0,.18);padding:20px;
+}
+.cookie-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.cookie-btn{border:none;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer}
+.cookie-accept{background:var(--green);color:#fff}
+.cookie-decline{background:#ececec;color:#222}
+.note{font-size:14px;color:var(--muted)}
+@media (max-width:860px){
+  .hero h2{font-size:38px}
+  .form-grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .header-inner{align-items:flex-start}
+  .logo{width:64px;height:64px}
+  .brand h1{font-size:28px}
+  .hero p{font-size:18px}
+  .section{padding:58px 16px}
+  .cookie-banner{left:12px;right:12px;bottom:12px}
+}
+
+<style>
+.floating-contact{
+position:fixed;
+right:18px;
+bottom:18px;
+display:flex;
+flex-direction:column;
+gap:10px;
+z-index:999;
+}
+.floating-contact a{
+text-decoration:none;
+padding:12px 16px;
+border-radius:30px;
+color:#fff;
+font-weight:bold;
+box-shadow:0 6px 18px rgba(0,0,0,.2);
+}
+.callbtn{background:#b7332a;}
+.whatsappbtn{background:#25D366;}
+</style>
+</style>
+</head>
+<body>
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+<div class="topbar">STURMSCHADEN NOTFALL – 24h erreichbar: <a href="tel:+4917631331619" style="color:#fff; text-decoration:underline;">0176 31331619</a></div>
+
+<header>
+  <div class="header-inner">
+    <img src="logo/logo.png" alt="Logo Baumpflege Zwarg" class="logo">
+    <div class="brand">
+      <h1>Baumpflege Zwarg</h1>
+      <p>Fachbetrieb für Baumpflege · Baumfällung · Baumkontrolle</p>
+    </div>
+  </div>
+</header>
+
+<nav aria-label="Hauptnavigation">
+  <div class="nav-inner">
+    <a href="#start">Start</a>
+    <a href="#zertifikate">Zertifikate</a>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#bewertungen">Bewertungen</a>
+    <a href="#arbeiten">Arbeitsbilder</a>
+    <a href="#angebot">Anfrage</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="#impressum">Impressum</a>
+    <a href="#datenschutz">Datenschutz</a>
+  </div>
+</nav>
+
+<section class="hero" id="start">
+  <div class="hero-box">
+    <h2>Professionelle Baumpflege im Saalekreis</h2>
+    <p>Baumpflege Zwarg ist Ihr Ansprechpartner für fachgerechte Baumpflege, sichere Baumfällungen, Sturmschäden und Baumkontrollen in Bad Lauchstädt, im gesamten Saalekreis und bis 100 km Umkreis.</p>
+    <p><strong>Kostenlose Besichtigung und unverbindliche Einschätzung vor Ort.</strong></p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#angebot">Kostenlose Anfrage stellen</a>
+      <a class="btn btn-secondary" href="#kontakt">Direkt Kontakt aufnehmen</a>
+    </div>
+  </div>
+</section>
+
+<main id="inhalt">
+  <section class="section">
+    <div class="grid highlights">
+      <div class="card"><h4>Zertifiziert</h4><p>European Tree Worker, FLL-zertifizierter Baumkontrolleur und Seilklettertechnik.</p></div>
+      <div class="card"><h4>Regional im Einsatz</h4><p>Bad Lauchstädt, Saalekreis und bis 100 km Umkreis für Privatkunden, Unternehmen und Kommunen.</p></div>
+      <div class="card"><h4>Schnelle Hilfe</h4><p>Unterstützung bei Sturmschäden, Gefahrenstellen und schwierigen Fällsituationen.</p></div>
+      
+    </div>
+  </section>
+
+  <section class="section" id="zertifikate">
+    <h3>Zertifizierter Fachbetrieb</h3>
+    
+    <div class="grid badges">
+      <div class="badge">
+        <img src="zertifikate/etw.jpg" alt="European Tree Worker Zertifikat">
+        <strong>European Tree Worker</strong>
+      </div>
+      <div class="badge">
+        <img src="zertifikate/fll.jpg" alt="FLL Zertifikat">
+        <strong>FLL-zertifizierter Baumkontrolleur</strong>
+      </div>
+      <div class="badge">
+        <img src="zertifikate/sktb.jpg" alt="SKT-B Zertifikat">
+        <strong>Seilklettertechnik SKT-B</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="leistungen">
+    <h3>Leistungen</h3>
+    <p class="section-intro">Fachgerecht, sicher und sauber ausgeführt – für Einzelaufträge, laufende Pflege und akute Schadenslagen.</p>
+    <div class="grid services">
+      <div class="card"><h4>Baumpflege</h4><p>Kronenpflege, Rückschnitt, Totholzentfernung und Erhaltung wertvoller Bäume nach fachlichen Standards.</p></div>
+      <div class="card"><h4>Baumfällung</h4><p>Sichere Fällungen auch bei schwierigen Platzverhältnissen und beengten Standorten.</p></div>
+      <div class="card"><h4>Sturmschäden</h4><p>Schnelle Hilfe bei Gefahrenstellen, abgebrochenen Kronenteilen und akuten Sicherungsmaßnahmen.</p></div>
+      <div class="card"><h4>Baumkontrolle</h4><p>Fachkundige Kontrolle zur Einschätzung von Stand- und Bruchsicherheit sowie notwendigem Pflegebedarf.</p></div>
+      <div class="card"><h4>Baumpflanzung</h4><p>Standortgerechte Pflanzung mit Blick auf Entwicklung, Pflege und nachhaltigen Anwuchserfolg.</p></div>
+      <div class="card"><h4>Stubbenfräsen</h4><p>Saubere Entfernung von Wurzelstöcken und Vorbereitung der Fläche für die weitere Nutzung.</p></div>
+    </div>
+  </section>
+
+  
+
+  <section class="section" id="arbeiten">
+    <h3>Arbeitsbilder</h3>
+    
+    <div class="grid gallery">
+      <img src="arbeitsbilder/arbeit1.jpg" alt="Arbeitsbild Baumpflege 1">
+      <img src="arbeitsbilder/arbeit2.jpg" alt="Arbeitsbild Baumpflege 2">
+      <img src="arbeitsbilder/arbeit3.jpg" alt="Arbeitsbild Baumpflege 3">
+      <img src="arbeitsbilder/arbeit4.jpg" alt="Arbeitsbild Baumpflege 4">
+      <img src="arbeitsbilder/arbeit5.jpg" alt="Arbeitsbild Baumpflege 5">
+      <img src="arbeitsbilder/arbeit6.jpg" alt="Arbeitsbild Baumpflege 6">
+    </div>
+  </section>
+
+  <section class="section" id="angebot">
+    <div class="offer">
+      <h3 style="color:#fff">Kostenlose Angebotsanfrage</h3>
+      <p class="section-intro" style="color:rgba(255,255,255,.92)">Dieses Formular öffnet das E-Mail-Programm des Besuchers. Damit werden keine Formulardaten auf dieser Website gespeichert. Beschreiben Sie möglichst Baumart, Höhe, Standort und ob ein Sturmschaden vorliegt.</p>
+      <form class="form" action="mailto:baumpflegezwarg@gmail.com" method="post" enctype="text/plain">
+        <div class="form-grid">
+          <input type="text" name="Name" placeholder="Ihr Name" required>
+          <input type="tel" name="Telefon" placeholder="Telefonnummer" required>
+        </div>
+        <div class="form-grid">
+          <input type="email" name="E-Mail" placeholder="E-Mail-Adresse" required>
+          <select name="Leistung" required>
+            <option value="">Leistung wählen</option>
+            <option>Baumpflege</option>
+            <option>Baumfällung</option>
+            <option>Sturmschäden</option>
+            <option>Baumkontrolle</option>
+            <option>Baumpflanzung</option>
+            <option>Stubbenfräsen</option>
+          </select>
+        </div>
+        <textarea name="Nachricht" placeholder="Beschreiben Sie Ihr Anliegen" required></textarea>
+        <label class="consent">
+          <input type="checkbox" required>
+          <span>Ich habe die <a href="#datenschutz" style="color:#fff;text-decoration:underline;">Datenschutzerklärung</a> zur Kenntnis genommen und bin mit der Kontaktaufnahme zur Bearbeitung meiner Anfrage einverstanden.</span>
+        </label>
+        <button type="submit">Anfrage per E-Mail vorbereiten</button>
+      </form>
+      
+    </div>
+  </section>
+
+  <section class="section contact" id="kontakt">
+    <h3>Kontakt</h3>
+    <div class="contact-box">
+      <ul class="contact-list">
+        <li><strong>Telefon / Notfallnummer:</strong> <a href="tel:+4917631331619">0176 31331619</a></li>
+        <li><strong>E-Mail:</strong> <a href="mailto:baumpflegezwarg@gmail.com">baumpflegezwarg@gmail.com</a></li>
+        <li><strong>Adresse:</strong> Lange Straße 29, 06246 Bad Lauchstädt</li>
+        <li><strong>Einsatzgebiet:</strong> Bad Lauchstädt, Saalekreis und bis 100 km Umkreis</li>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/4917631331619" target="_blank" rel="noopener noreferrer">Jetzt Nachricht senden</a></li>
+      </ul>
+      <div class="map-card">
+        
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Lange+Stra%C3%9Fe+29,+06246+Bad+Lauchst%C3%A4dt" target="_blank" rel="noopener noreferrer">Adresse in Google Maps öffnen</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="rechtliches">
+    <div class="legal-wrap">
+      <div class="legal-box" id="impressum">
+        <h4>Impressum</h4>
+        <p>
+          <strong>Baumpflege Zwarg</strong><br>
+          Inhaber: Fabian Zwarg<br>
+          Lange Straße 29<br>
+          06246 Bad Lauchstädt<br>
+          Deutschland
+        </p>
+        <p>
+          Telefon: <a href="tel:+4917631331619">0176 31331619</a><br>
+          E-Mail: <a href="mailto:baumpflegezwarg@gmail.com">baumpflegezwarg@gmail.com</a>
+        </p>
+        <p>
+          Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:<br>
+          DE454646261
+        </p>
+        <p>
+          Verantwortlich für journalistisch-redaktionelle Inhalte gemäß § 18 Abs. 2 MStV:<br>
+          Fabian Zwarg, Anschrift wie oben
+        </p>
+      </div>
+
+      <div class="legal-box" id="datenschutz">
+        <h4>Datenschutzerklärung</h4>
+        <p><strong>1. Verantwortlicher</strong><br>
+          Baumpflege Zwarg, Inhaber Fabian Zwarg, Lange Straße 29, 06246 Bad Lauchstädt,<br>
+          Telefon: <a href="tel:+4917631331619">0176 31331619</a>, E-Mail: <a href="mailto:baumpflegezwarg@gmail.com">baumpflegezwarg@gmail.com</a>
+        </p>
+
+        <p><strong>2. Hosting und Server-Log-Dateien</strong><br>
+          Beim Aufruf dieser Website werden durch den Hosting-Anbieter technisch erforderliche Daten verarbeitet. Dazu können insbesondere IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Datei, übertragene Datenmenge, Browsertyp, Betriebssystem und Referrer-URL gehören. Die Verarbeitung erfolgt zur Sicherstellung des technischen Betriebs, der Stabilität und der Sicherheit der Website.
+        </p>
+
+        <p><strong>3. Kontaktaufnahme per E-Mail, Telefon oder WhatsApp</strong><br>
+          Wenn Sie uns per E-Mail, Telefon oder WhatsApp kontaktieren, verarbeiten wir Ihre Angaben zur Bearbeitung Ihrer Anfrage und für eventuelle Anschlussfragen. Eine Weitergabe erfolgt nur, wenn dies zur Bearbeitung erforderlich ist oder eine gesetzliche Verpflichtung besteht. Bei einer Kontaktaufnahme über WhatsApp gelten ergänzend die Datenschutzbestimmungen von WhatsApp bzw. Meta.
+        </p>
+
+        <p><strong>4. Anfrageformular</strong><br>
+          Das Anfrageformular auf dieser Website speichert keine Daten auf einem eigenen Webserver. Beim Absenden wird das auf dem Endgerät des Nutzers eingerichtete E-Mail-Programm geöffnet und eine Nachricht vorbereitet. Die eigentliche Übermittlung erfolgt erst über das vom Nutzer verwendete E-Mail-Programm.
+        </p>
+
+        <p><strong>5. Externe Links und Karten</strong><br>
+          Auf dieser Website sind Links zu externen Diensten wie Google Maps und WhatsApp eingebunden. Erst wenn Sie einen solchen Link aktiv anklicken, werden Daten an den jeweiligen Anbieter übertragen. Eine automatische Karten-Einbettung findet auf dieser Website bewusst nicht statt.
+        </p>
+
+        <p><strong>6. Cookies und lokale Speicherung</strong><br>
+          Diese Website verwendet keine klassischen Tracking- oder Marketing-Cookies. Lediglich die Auswahl im Cookie-Hinweis wird im lokalen Speicher Ihres Browsers gespeichert, damit der Hinweis nicht bei jedem Seitenaufruf erneut erscheint.
+        </p>
+
+        <p><strong>7. Ihre Rechte</strong><br>
+          Sie haben im Rahmen der gesetzlichen Vorgaben insbesondere das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch gegen bestimmte Verarbeitungen. Außerdem besteht ein Beschwerderecht bei einer zuständigen Datenschutz-Aufsichtsbehörde.
+        </p>
+
+        <p><strong>8. Stand</strong><br>
+          Stand dieser Datenschutzerklärung: 09.03.2026</p>
+        
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="#impressum">Impressum</a>
+    <a href="#datenschutz">Datenschutz</a>
+    <a href="#kontakt">Kontakt</a>
+  </div>
+  <div>© Baumpflege Zwarg</div>
+
+<section class="section" id="bewertungen">
+<h3>Kundenbewertungen</h3>
+<p>Echte Bewertungen finden Sie direkt auf unserem Google-Unternehmensprofil.</p>
+<a href="https://www.google.com/search?q=Baumpflege+Zwarg+Bad+Lauchstädt#lrd=0x0:0x0,1" target="_blank" style="display:inline-block;margin-top:10px;padding:12px 18px;background:#1f3d2b;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">
+Google Bewertungen ansehen
+</a>
+</section>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/4917631331619" target="_blank" rel="noopener noreferrer" aria-label="Kontakt per WhatsApp">WhatsApp</a>
+
+<div class="cookie-banner" id="cookieBanner" aria-live="polite">
+  <div class="cookie-card">
+    <strong>Cookies und externe Dienste</strong>
+    <div>Diese Website verwendet keine Tracking-Cookies. Gespeichert wird nur Ihre Auswahl zu diesem Auswahl im Browser. Externe Dienste wie Google Maps oder WhatsApp werden erst nach Ihrem aktiven Klick geöffnet.</div>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-accept" id="acceptCookies">Verstanden</button>
+      <button class="cookie-btn cookie-decline" id="closeCookies">Schließen</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var banner = document.getElementById('cookieBanner');
+  var acceptBtn = document.getElementById('acceptCookies');
+  var closeBtn = document.getElementById('closeCookies');
+  var key = 'bz_cookie_notice_accepted';
+
+  function hideBanner(){
+    banner.style.display = 'none';
+  }
+
+  function showBanner(){
+    banner.style.display = 'block';
+  }
+
+  if(!localStorage.getItem(key)){
+    showBanner();
+  }
+
+  acceptBtn.addEventListener('click', function(){
+    localStorage.setItem(key, 'yes');
+    hideBanner();
+  });
+
+  closeBtn.addEventListener('click', hideBanner);
+})();
+</script>
+
+<div class="floating-contact">
+<a class="callbtn" href="tel:+4917631331619">Notfall anrufen</a>
+<a class="whatsappbtn" href="https://wa.me/4917631331619">WhatsApp</a>
+</div>
+
+</body>
+</html>
