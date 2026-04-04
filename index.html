@@ -6,7 +6,13 @@
 <title>Baumpflege Zwarg | Baumpflege, Baumfällung & Baumkontrolle im Saalekreis</title>
 <meta name="description" content="Baumpflege Zwarg – Fachbetrieb für Baumpflege, Baumfällung, Baumkontrolle und Sturmschäden in Bad Lauchstädt, Saalekreis und bis 100 km Umkreis.">
 <meta name="robots" content="index,follow">
-<link rel="icon" type="image/png" href="logo/logo.jpg">
+<link rel="icon" type="image/png" href="logo/logo.png">
+<meta property="og:title" content="Baumpflege Zwarg | Baumpflege, Baumfällung & Baumkontrolle im Saalekreis">
+<meta property="og:description" content="Fachbetrieb für Baumpflege, Baumfällung, Baumkontrolle und Sturmschäden in Bad Lauchstädt und im Saalekreis. Kostenlose Besichtigung vor Ort.">
+<meta property="og:image" content="https://adris-hub.github.io/Baumpflege-Zwarg/arbeitsbilder/arbeit1.jpg">
+<meta property="og:url" content="https://adris-hub.github.io/Baumpflege-Zwarg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
 <style>
 :root{
   --green:#1f3d2b;
@@ -57,7 +63,9 @@ header{
   gap:18px;
 }
 .logo{
-  width:78px;height:78px;object-fit:cover;background:#fff;border-radius:16px;padding:2px;flex:0 0 auto;
+  width:130px;height:130px;object-fit:contain;background:#fff;border-radius:16px;padding:6px;flex:0 0 auto;
+  box-shadow:0 4px 16px rgba(0,0,0,.3);
+  image-rendering:crisp-edges;
 }
 .brand h1{margin:0;font-size:32px}
 .brand p{margin:4px 0 0;font-weight:700;opacity:.95}
@@ -219,27 +227,6 @@ footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top
   .cookie-banner{left:12px;right:12px;bottom:12px}
 }
 
-<style>
-.floating-contact{
-position:fixed;
-right:18px;
-bottom:18px;
-display:flex;
-flex-direction:column;
-gap:10px;
-z-index:999;
-}
-.floating-contact a{
-text-decoration:none;
-padding:12px 16px;
-border-radius:30px;
-color:#fff;
-font-weight:bold;
-box-shadow:0 6px 18px rgba(0,0,0,.2);
-}
-.callbtn{background:#b7332a;}
-.whatsappbtn{background:#25D366;}
-</style>
 </style>
 </head>
 <body>
@@ -249,7 +236,7 @@ box-shadow:0 6px 18px rgba(0,0,0,.2);
 
 <header>
   <div class="header-inner">
-    <img src="logo/logo.jpg" alt="Logo Baumpflege Zwarg" class="logo">
+    <img src="logo/logo.png" alt="Logo Baumpflege Zwarg" class="logo">
     <div class="brand">
       <h1>Baumpflege Zwarg</h1>
       <p>Fachbetrieb für Baumpflege · Baumfällung · Baumkontrolle</p>
@@ -267,7 +254,6 @@ box-shadow:0 6px 18px rgba(0,0,0,.2);
 <a href="#start">Start</a>
       <a href="#zertifikate">Zertifikate</a>
       <a href="#leistungen">Leistungen</a>
-      <a href="#bewertungen">Bewertungen</a>
       <a href="#arbeiten">Arbeitsbilder</a>
       <a href="#angebot">Anfrage</a>
       <a href="#kontakt">Kontakt</a>
@@ -392,10 +378,13 @@ box-shadow:0 6px 18px rgba(0,0,0,.2);
         <li><strong>WhatsApp:</strong> <a href="https://wa.me/4917631331619" target="_blank" rel="noopener noreferrer">Jetzt Nachricht senden</a></li>
       </ul>
       <div class="map-card">
-<iframe
-          src="https://maps.google.com/maps?q=Lange+Stra%C3%9Fe+29,+06246+Bad+Lauchst%C3%A4dt&output=embed"
-          width="100%" height="300" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Einsatzgebiet Baumpflege Zwarg"></iframe>
-        <a class="btn btn-primary" style="margin-top:12px;display:inline-block;" href="https://www.google.com/maps/search/?api=1&query=Lange+Stra%C3%9Fe+29,+06246+Bad+Lauchst%C3%A4dt" target="_blank" rel="noopener noreferrer">Adresse in Google Maps öffnen</a>
+        <div id="mapPlaceholder" style="width:100%;height:300px;background:#e8efe9;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;cursor:pointer;" onclick="loadMap()">
+          <div style="font-size:36px;">📍</div>
+          <div style="font-weight:700;color:var(--green);">Lange Straße 29, 06246 Bad Lauchstädt</div>
+          <div style="font-size:14px;color:var(--muted);text-align:center;max-width:300px;">Klicken um Google Maps zu laden.<br>Dabei werden Daten an Google übertragen.</div>
+          <div style="background:var(--green);color:#fff;padding:10px 20px;border-radius:10px;font-weight:700;">Karte anzeigen</div>
+        </div>
+        <div id="mapFrame" style="display:none;"></div>
       </div>
     </div>
   </section>
@@ -444,20 +433,28 @@ box-shadow:0 6px 18px rgba(0,0,0,.2);
           Das Anfrageformular auf dieser Website speichert keine Daten auf einem eigenen Webserver. Beim Absenden wird das auf dem Endgerät des Nutzers eingerichtete E-Mail-Programm geöffnet und eine Nachricht vorbereitet. Die eigentliche Übermittlung erfolgt erst über das vom Nutzer verwendete E-Mail-Programm.
         </p>
 
-        <p><strong>5. Externe Links und Karten</strong><br>
-          Auf dieser Website sind Links zu externen Diensten wie Google Maps und WhatsApp eingebunden. Erst wenn Sie einen solchen Link aktiv anklicken, werden Daten an den jeweiligen Anbieter übertragen. Eine automatische Karten-Einbettung findet auf dieser Website bewusst nicht statt.
+        <p><strong>5. Hosting</strong><br>
+          Diese Website wird über GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA) gehostet. Beim Aufruf der Website kann GitHub technisch notwendige Daten wie IP-Adressen verarbeiten. Weitere Informationen finden Sie in der <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von GitHub</a>.
         </p>
 
-        <p><strong>6. Cookies und lokale Speicherung</strong><br>
-          Diese Website verwendet keine klassischen Tracking- oder Marketing-Cookies. Lediglich die Auswahl im Cookie-Hinweis wird im lokalen Speicher Ihres Browsers gespeichert, damit der Hinweis nicht bei jedem Seitenaufruf erneut erscheint.
+        <p><strong>6. Google Maps (2-Klick-Lösung)</strong><br>
+          Auf dieser Website wird Google Maps (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) eingesetzt. Die Karte wird erst nach aktivem Klick auf die Kartenvorschau geladen. Erst dann werden Daten wie Ihre IP-Adresse an Google übertragen. Rechtsgrundlage ist Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Datenschutzerklärung</a>.
         </p>
 
-        <p><strong>7. Ihre Rechte</strong><br>
-          Sie haben im Rahmen der gesetzlichen Vorgaben insbesondere das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch gegen bestimmte Verarbeitungen. Außerdem besteht ein Beschwerderecht bei einer zuständigen Datenschutz-Aufsichtsbehörde.
+        <p><strong>7. Externe Links (WhatsApp)</strong><br>
+          Diese Website enthält Links zu WhatsApp (Meta Platforms Ireland Limited). Erst wenn Sie einen solchen Link aktiv anklicken, werden Daten an den jeweiligen Anbieter übertragen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung). Es gelten die Datenschutzbestimmungen von <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">WhatsApp</a>.
         </p>
 
-        <p><strong>8. Stand</strong><br>
-          Stand dieser Datenschutzerklärung: 09.03.2026</p>
+        <p><strong>8. Cookies und lokale Speicherung</strong><br>
+          Diese Website verwendet keine Tracking- oder Marketing-Cookies. Lediglich Ihre Auswahl im Cookie-Hinweis wird im lokalen Speicher Ihres Browsers gespeichert (kein Server-Zugriff). Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Benutzerfreundlichkeit).
+        </p>
+
+        <p><strong>9. Ihre Rechte</strong><br>
+          Sie haben gemäß DSGVO das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) sowie Widerspruch (Art. 21). Außerdem besteht ein Beschwerderecht bei der zuständigen Datenschutz-Aufsichtsbehörde, z. B. dem Landesbeauftragten für den Datenschutz Sachsen-Anhalt.
+        </p>
+
+        <p><strong>10. Stand</strong><br>
+          Stand dieser Datenschutzerklärung: 05.04.2026</p>
         
       </div>
     </div>
@@ -475,7 +472,7 @@ box-shadow:0 6px 18px rgba(0,0,0,.2);
 <section class="section" id="bewertungen">
 <h3>Kundenbewertungen</h3>
 <p>Echte Bewertungen finden Sie direkt auf unserem Google-Unternehmensprofil.</p>
-<a href="https://www.google.com/search?q=Baumpflege+Zwarg+Bad+Lauchstädt#lrd=0x0:0x0,1" target="_blank" style="display:inline-block;margin-top:10px;padding:12px 18px;background:#1f3d2b;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">
+<a href="https://www.google.com/search?sca_esv=a640d412492df4ff&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-_0IujsZetP8z619LoryEzXSsabkJJwIrgJyBorwncq3dqD3iQw0maqWwI7-T3LSS2uL7qJ596vEEMz_-vXqE5J-P0JXbVzH4X-GwVfd8b9lVOn00-Vlnrc97lr_Ks_hfzXBzkL1anZLT86JYI0cKwt8on6A&q=Baumpflege+Zwarg+Rezensionen&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOTypV0yCNcSNTMoRX2VJE-o-zsZSCK49R4Vz_E9nFZ0MTJIy5HdDteGJ18_i6AGpQMu2f_0fR-meNKJ0jUHVRQdPE_T7cijfOqC439NZOn0cAxUUdw%3D%3D&hl=de-DE" target="_blank" style="display:inline-block;margin-top:10px;padding:12px 18px;background:#1f3d2b;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">
 Google Bewertungen ansehen
 </a>
 </section>
@@ -497,6 +494,20 @@ Google Bewertungen ansehen
     </div>
   </div>
 </div>
+
+<script>
+function loadMap(){
+  document.getElementById('mapPlaceholder').style.display = 'none';
+  var frame = document.getElementById('mapFrame');
+  frame.style.display = 'block';
+  frame.innerHTML = '<iframe src="https://maps.google.com/maps?q=Lange+Stra%C3%9Fe+29,+06246+Bad+Lauchst%C3%A4dt&output=embed" width="100%" height="300" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Standort Baumpflege Zwarg"></iframe>';
+}
+</script>
+
+<script>
+history.scrollRestoration = 'manual';
+window.addEventListener('load', function(){ window.scrollTo(0, 0); });
+</script>
 
 <script>
 (function(){
@@ -552,7 +563,10 @@ Google Bewertungen ansehen
     hideBanner();
   });
 
-  closeBtn.addEventListener('click', hideBanner);
+  closeBtn.addEventListener('click', function(){
+    localStorage.setItem(key, 'no');
+    hideBanner();
+  });
 })();
 </script>
 
