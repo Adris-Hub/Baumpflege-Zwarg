@@ -1,0 +1,30 @@
+BAUMPFLEGE ZWARG – KURZANLEITUNG
+
+1. Arbeitsbilder austauschen
+- Öffnen Sie den Ordner: arbeitsbilder
+- Ersetzen Sie die Dateien hero.jpg, arbeit1.jpg bis arbeit6.jpg durch Ihre eigenen Bilder
+- Wichtig: Die Dateinamen sollten gleich bleiben, damit nichts an der Website geändert werden muss
+
+2. Zertifikate austauschen
+- Öffnen Sie den Ordner: zertifikate
+- Ersetzen Sie etw.jpg, fll.jpg und sktb.jpg durch Ihre finalen Dateien
+- Auch hier die Dateinamen am besten beibehalten
+
+3. Kontaktangaben ändern
+- Falls Sie E-Mail, Telefonnummer oder Adresse später ändern möchten, öffnen Sie die Datei index.html
+- Suchen Sie nach:
+  - 0176 31331619
+  - baumpflegezwarg@gmail.com
+  - Lange Straße 29, 06246 Bad Lauchstädt
+
+4. Bewertungen
+- Nutzen Sie in diesem Abschnitt nur echte Bewertungen
+- Falls eine Bewertung noch nicht verwendet werden soll, kann der Text in der Datei index.html entfernt oder ersetzt werden
+
+5. Online stellen
+- Den kompletten Inhalt dieser ZIP-Datei beim Hostinganbieter hochladen
+- Wichtig: index.html und die Ordner logo, arbeitsbilder, zertifikate müssen zusammen online liegen
+
+6. Rechtlicher Hinweis
+- Die Website ist für eine kleine deutsche Firmenwebsite sauber vorbereitet
+- Eine individuelle rechtliche Prüfung durch einen Anwalt oder Datenschutzberater ersetzt sie nicht
