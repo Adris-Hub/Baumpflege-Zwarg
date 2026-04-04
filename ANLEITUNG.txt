@@ -28,3 +28,6 @@ BAUMPFLEGE ZWARG – KURZANLEITUNG
 6. Rechtlicher Hinweis
 - Die Website ist für eine kleine deutsche Firmenwebsite sauber vorbereitet
 - Eine individuelle rechtliche Prüfung durch einen Anwalt oder Datenschutzberater ersetzt sie nicht
+
+7. Seite öffnen
+- https://adris-hub.github.io/Baumpflege-Zwarg
