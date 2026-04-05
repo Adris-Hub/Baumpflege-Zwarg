@@ -235,12 +235,15 @@ footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top
   .form-grid{grid-template-columns:1fr}
 }
 @media (max-width:640px){
-  .header-inner{align-items:flex-start}
-  .logo{width:80%;height:260px!important;max-height:none!important;object-position:left;object-fit:contain;}
-  header{background:rgba(31,61,43,.74);position:relative;z-index:5;margin-bottom:0;}
+  .header-inner{align-items:center;justify-content:center;}
+  picture{display:block;width:100%;}
+  .logo{width:80%;height:auto!important;max-height:none!important;margin:0 auto;}
+  header{background:rgba(31,61,43,.74);position:relative;z-index:5;margin:0;}
   .hero{background:rgba(31,61,43,.74)!important;}
-  nav{height:0;overflow:hidden;}
-  .hero{margin-top:0;padding-top:10px;padding-bottom:40px;position:relative;z-index:1;}
+  nav{height:0;overflow:hidden;margin:0;padding:0;}
+  .topbar{margin:0;}
+  .header-inner{padding:0;margin:0;}
+  .hero{margin:0;padding-top:0;padding-bottom:40px;position:relative;z-index:1;}
   .brand h1{font-size:28px}
   .hero p{font-size:18px}
   .section{padding:58px 16px}
@@ -273,7 +276,7 @@ footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top
 
 <header>
   <div class="header-inner">
-    <picture>
+    <picture style="display:block;line-height:0;">
       <source srcset="logo/logo.webp" type="image/webp">
       <img src="logo/logo.png" alt="Logo Baumpflege Zwarg" class="logo">
     </picture>
