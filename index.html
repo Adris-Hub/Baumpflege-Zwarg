@@ -32,7 +32,7 @@
   --max:1150px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{-webkit-scroll-behavior:smooth;scroll-behavior:smooth}
 body{
   margin:0;
   font-family:'Inter',Verdana,Arial,sans-serif;
@@ -71,6 +71,7 @@ header{
   width:130px;height:130px;object-fit:contain;background:#fff;border-radius:16px;padding:6px;flex:0 0 auto;
   box-shadow:0 4px 16px rgba(0,0,0,.3);
   image-rendering:crisp-edges;
+  image-rendering:-webkit-optimize-contrast;
 }
 .brand h1{margin:0;font-size:32px}
 .brand p{margin:4px 0 0;font-weight:700;opacity:.95}
@@ -102,6 +103,7 @@ nav a:hover{text-decoration:underline}
   position:relative;
   z-index:101;
   opacity:0;
+  -webkit-transition:opacity .3s;
   transition:opacity .3s;
 }
 .hamburger span{
@@ -109,7 +111,7 @@ nav a:hover{text-decoration:underline}
 }
 .nav-links{display:flex;flex-wrap:wrap;gap:18px;align-items:center;}
 @media(max-width:640px){
-  nav{background:transparent;border:none;position:static;backdrop-filter:none;}
+  nav{background:transparent;border:none;position:static;-webkit-backdrop-filter:none;backdrop-filter:none;}
   .nav-inner{padding:0;background:transparent;}
   .hamburger{
     display:flex;
@@ -126,6 +128,8 @@ nav a:hover{text-decoration:underline}
     position:fixed;
     top:14px;right:14px;
     height:auto;
+    width:-webkit-fit-content;
+    width:-moz-fit-content;
     width:fit-content;
     flex-direction:column;
     align-items:flex-start;
@@ -153,7 +157,7 @@ nav a:hover{text-decoration:underline}
   display:inline-block;padding:14px 22px;border-radius:12px;font-weight:700;text-decoration:none;transition:.2s ease;
 }
 .btn-primary{background:#fff;color:var(--green)}
-.btn-primary:hover{transform:translateY(-1px)}
+.btn-primary:hover{-webkit-transform:translateY(-1px);transform:translateY(-1px)}
 .btn-secondary{background:transparent;color:#fff;border:2px solid #fff}
 .btn-secondary:hover{background:rgba(255,255,255,.08)}
 main{display:block}
@@ -171,7 +175,7 @@ main{display:block}
 }
 .card h4,.badge strong{color:var(--green)}
 .card h4{margin:0 0 8px;font-size:22px}
-.badge{text-align:center}
+.badge{text-align:center;display:flex;flex-direction:column;align-items:center;}
 .badge img{width:100%;max-width:260px;height:340px;object-fit:contain;margin:0 auto 12px;background:#fafafa;border-radius:12px}
 .gallery img{width:100%;height:250px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow);background:#fff}
 .review-stars{color:#c79310;font-size:22px;margin-bottom:10px}
@@ -292,16 +296,19 @@ footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top
     
     <div class="grid badges">
       <div class="badge">
-        <img src="zertifikate/etw.jpg" alt="European Tree Worker Zertifikat">
+        <img src="zertifikate/etw zertifikat.jpg" alt="European Tree Worker Zertifikat">
         <strong>European Tree Worker</strong>
+        <a href="zertifikate/etw zertifikat.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:10px;padding:8px 16px;background:var(--green);color:#fff;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;">PDF ansehen</a>
       </div>
       <div class="badge">
-        <img src="zertifikate/fll.jpg" alt="FLL Zertifikat">
+        <img src="zertifikate/Fll Baumkontrolleur zertifikat.jpg" alt="FLL Zertifikat">
         <strong>FLL-zertifizierter Baumkontrolleur</strong>
+        <a href="zertifikate/Fll Baumkontrolleur zertifikat.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:10px;padding:8px 16px;background:var(--green);color:#fff;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;">PDF ansehen</a>
       </div>
       <div class="badge">
-        <img src="zertifikate/sktb.jpg" alt="SKT-B Zertifikat">
+        <img src="zertifikate/Skt B Zertifikat.jpg" alt="SKT-B Zertifikat">
         <strong>Seilklettertechnik SKT-B</strong>
+        <a href="zertifikate/Skt B Zertifikat.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:10px;padding:8px 16px;background:var(--green);color:#fff;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;">PDF ansehen</a>
       </div>
     </div>
   </section>
@@ -432,7 +439,7 @@ function loadMap(){
 </script>
 
 <script>
-history.scrollRestoration = 'manual';
+try{ history.scrollRestoration = 'manual'; }catch(e){}
 window.addEventListener('load', function(){ window.scrollTo(0, 0); });
 </script>
 
@@ -481,17 +488,17 @@ window.addEventListener('load', function(){ window.scrollTo(0, 0); });
     banner.style.display = 'block';
   }
 
-  if(!localStorage.getItem(key)){
-    showBanner();
-  }
+  try{
+    if(!localStorage.getItem(key)){ showBanner(); }
+  }catch(e){ showBanner(); }
 
   acceptBtn.addEventListener('click', function(){
-    localStorage.setItem(key, 'yes');
+    try{ localStorage.setItem(key, 'yes'); }catch(e){}
     hideBanner();
   });
 
   closeBtn.addEventListener('click', function(){
-    localStorage.setItem(key, 'no');
+    try{ localStorage.setItem(key, 'no'); }catch(e){}
     hideBanner();
   });
 })();
