@@ -1,1 +1,0 @@
-# Baumpflege-Zwarg

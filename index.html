@@ -6,6 +6,9 @@
 <title>Baumpflege Zwarg | Baumpflege, Baumfällung & Baumkontrolle im Saalekreis</title>
 <meta name="description" content="Baumpflege Zwarg – Fachbetrieb für Baumpflege, Baumfällung, Baumkontrolle und Sturmschäden in Bad Lauchstädt, Saalekreis und bis 100 km Umkreis.">
 <meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="logo/logo.png">
 <meta property="og:title" content="Baumpflege Zwarg | Baumpflege, Baumfällung & Baumkontrolle im Saalekreis">
 <meta property="og:description" content="Fachbetrieb für Baumpflege, Baumfällung, Baumkontrolle und Sturmschäden in Bad Lauchstädt und im Saalekreis. Kostenlose Besichtigung vor Ort.">
@@ -32,7 +35,7 @@
 html{scroll-behavior:smooth}
 body{
   margin:0;
-  font-family:Arial,Helvetica,sans-serif;
+  font-family:'Inter',Verdana,Arial,sans-serif;
   background:var(--light);
   color:var(--text);
   line-height:1.6;
@@ -49,15 +52,17 @@ a{color:inherit}
   text-align:center;
   padding:12px 16px;
   font-weight:700;
+  font-family:'Inter',Verdana,sans-serif;
 }
 header{
   background:linear-gradient(135deg,var(--green),var(--green-2));
   color:#fff;
-  padding:18px 20px;
+  padding:0;
 }
 .header-inner{
   max-width:var(--max);
   margin:0 auto;
+  padding:18px 20px;
   display:flex;
   align-items:center;
   gap:18px;
@@ -71,8 +76,7 @@ header{
 .brand p{margin:4px 0 0;font-weight:700;opacity:.95}
 nav{
   position:sticky;top:0;z-index:20;
-  background:rgba(22,51,34,.96);
-  backdrop-filter: blur(6px);
+  background:linear-gradient(135deg,var(--green),var(--green-2));
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 .nav-inner{
@@ -257,8 +261,6 @@ footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top
       <a href="#arbeiten">Arbeitsbilder</a>
       <a href="#angebot">Anfrage</a>
       <a href="#kontakt">Kontakt</a>
-      <a href="#impressum">Impressum</a>
-      <a href="#datenschutz">Datenschutz</a>
     </div>
   </div>
 </nav>
@@ -347,7 +349,7 @@ footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top
         <div class="form-grid">
           <input type="email" name="E-Mail" placeholder="E-Mail-Adresse" required>
           <select name="Leistung" required>
-            <option value="">Leistung wählen</option>
+            <option value="" disabled selected>Leistung wählen</option>
             <option>Baumpflege</option>
             <option>Baumfällung</option>
             <option>Sturmschäden</option>
@@ -359,7 +361,7 @@ footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top
         <textarea name="Nachricht" placeholder="Beschreiben Sie Ihr Anliegen" required></textarea>
         <label class="consent">
           <input type="checkbox" required>
-          <span>Ich habe die <a href="#datenschutz" style="color:#fff;text-decoration:underline;">Datenschutzerklärung</a> zur Kenntnis genommen und bin mit der Kontaktaufnahme zur Bearbeitung meiner Anfrage einverstanden.</span>
+          <span>Ich habe die <a href="datenschutz.html" style="color:#fff;text-decoration:underline;">Datenschutzerklärung</a> zur Kenntnis genommen und bin mit der Kontaktaufnahme zur Bearbeitung meiner Anfrage einverstanden.</span>
         </label>
         <button type="submit">Anfrage per E-Mail vorbereiten</button>
       </form>
@@ -389,83 +391,12 @@ footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top
     </div>
   </section>
 
-  <section class="section" id="rechtliches">
-    <div class="legal-wrap">
-      <div class="legal-box" id="impressum">
-        <h4>Impressum</h4>
-        <p>
-          <strong>Baumpflege Zwarg</strong><br>
-          Inhaber: Fabian Zwarg<br>
-          Lange Straße 29<br>
-          06246 Bad Lauchstädt<br>
-          Deutschland
-        </p>
-        <p>
-          Telefon: <a href="tel:+4917631331619">0176 31331619</a><br>
-          E-Mail: <a href="mailto:baumpflegezwarg@gmail.com">baumpflegezwarg@gmail.com</a>
-        </p>
-        <p>
-          Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:<br>
-          DE454646261
-        </p>
-        <p>
-          Verantwortlich für journalistisch-redaktionelle Inhalte gemäß § 18 Abs. 2 MStV:<br>
-          Fabian Zwarg, Anschrift wie oben
-        </p>
-      </div>
-
-      <div class="legal-box" id="datenschutz">
-        <h4>Datenschutzerklärung</h4>
-        <p><strong>1. Verantwortlicher</strong><br>
-          Baumpflege Zwarg, Inhaber Fabian Zwarg, Lange Straße 29, 06246 Bad Lauchstädt,<br>
-          Telefon: <a href="tel:+4917631331619">0176 31331619</a>, E-Mail: <a href="mailto:baumpflegezwarg@gmail.com">baumpflegezwarg@gmail.com</a>
-        </p>
-
-        <p><strong>2. Hosting und Server-Log-Dateien</strong><br>
-          Beim Aufruf dieser Website werden durch den Hosting-Anbieter technisch erforderliche Daten verarbeitet. Dazu können insbesondere IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Datei, übertragene Datenmenge, Browsertyp, Betriebssystem und Referrer-URL gehören. Die Verarbeitung erfolgt zur Sicherstellung des technischen Betriebs, der Stabilität und der Sicherheit der Website.
-        </p>
-
-        <p><strong>3. Kontaktaufnahme per E-Mail, Telefon oder WhatsApp</strong><br>
-          Wenn Sie uns per E-Mail, Telefon oder WhatsApp kontaktieren, verarbeiten wir Ihre Angaben zur Bearbeitung Ihrer Anfrage und für eventuelle Anschlussfragen. Eine Weitergabe erfolgt nur, wenn dies zur Bearbeitung erforderlich ist oder eine gesetzliche Verpflichtung besteht. Bei einer Kontaktaufnahme über WhatsApp gelten ergänzend die Datenschutzbestimmungen von WhatsApp bzw. Meta.
-        </p>
-
-        <p><strong>4. Anfrageformular</strong><br>
-          Das Anfrageformular auf dieser Website speichert keine Daten auf einem eigenen Webserver. Beim Absenden wird das auf dem Endgerät des Nutzers eingerichtete E-Mail-Programm geöffnet und eine Nachricht vorbereitet. Die eigentliche Übermittlung erfolgt erst über das vom Nutzer verwendete E-Mail-Programm.
-        </p>
-
-        <p><strong>5. Hosting</strong><br>
-          Diese Website wird über GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA) gehostet. Beim Aufruf der Website kann GitHub technisch notwendige Daten wie IP-Adressen verarbeiten. Weitere Informationen finden Sie in der <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von GitHub</a>.
-        </p>
-
-        <p><strong>6. Google Maps (2-Klick-Lösung)</strong><br>
-          Auf dieser Website wird Google Maps (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) eingesetzt. Die Karte wird erst nach aktivem Klick auf die Kartenvorschau geladen. Erst dann werden Daten wie Ihre IP-Adresse an Google übertragen. Rechtsgrundlage ist Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Datenschutzerklärung</a>.
-        </p>
-
-        <p><strong>7. Externe Links (WhatsApp)</strong><br>
-          Diese Website enthält Links zu WhatsApp (Meta Platforms Ireland Limited). Erst wenn Sie einen solchen Link aktiv anklicken, werden Daten an den jeweiligen Anbieter übertragen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung). Es gelten die Datenschutzbestimmungen von <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">WhatsApp</a>.
-        </p>
-
-        <p><strong>8. Cookies und lokale Speicherung</strong><br>
-          Diese Website verwendet keine Tracking- oder Marketing-Cookies. Lediglich Ihre Auswahl im Cookie-Hinweis wird im lokalen Speicher Ihres Browsers gespeichert (kein Server-Zugriff). Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Benutzerfreundlichkeit).
-        </p>
-
-        <p><strong>9. Ihre Rechte</strong><br>
-          Sie haben gemäß DSGVO das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) sowie Widerspruch (Art. 21). Außerdem besteht ein Beschwerderecht bei der zuständigen Datenschutz-Aufsichtsbehörde, z. B. dem Landesbeauftragten für den Datenschutz Sachsen-Anhalt.
-        </p>
-
-        <p><strong>10. Stand</strong><br>
-          Stand dieser Datenschutzerklärung: 05.04.2026</p>
-        
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer>
   <div class="footer-links">
-    <a href="#impressum">Impressum</a>
-    <a href="#datenschutz">Datenschutz</a>
-    <a href="#kontakt">Kontakt</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
   </div>
   <div>© Baumpflege Zwarg</div>
 
@@ -479,10 +410,6 @@ Google Bewertungen ansehen
 
 </footer>
 
-<div style="position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:19;">
-  <a href="tel:+4917631331619" style="display:inline-block;padding:14px 22px;border-radius:12px;font-weight:700;text-decoration:none;background:var(--red);color:#fff;box-shadow:var(--shadow);text-align:center;">Notfall anrufen</a>
-  <a href="https://wa.me/4917631331619" target="_blank" rel="noopener noreferrer" aria-label="Kontakt per WhatsApp" style="display:inline-block;padding:14px 22px;border-radius:12px;font-weight:700;text-decoration:none;background:#25D366;color:#fff;box-shadow:var(--shadow);text-align:center;">WhatsApp</a>
-</div>
 
 <div class="cookie-banner" id="cookieBanner" aria-live="polite">
   <div class="cookie-card">
