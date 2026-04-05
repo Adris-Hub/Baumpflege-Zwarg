@@ -18,6 +18,28 @@
 <meta property="og:url" content="https://adris-hub.github.io/Baumpflege-Zwarg">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
+<link rel="canonical" href="https://www.baumpflege-zwarg.de/">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Baumpflege Zwarg",
+  "description":"Fachbetrieb für Baumpflege, Baumfällung, Baumkontrolle und Sturmschäden im Saalekreis",
+  "url":"https://www.baumpflege-zwarg.de",
+  "telephone":"+4917631331619",
+  "email":"baumpflegezwarg@gmail.com",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Lange Straße 29",
+    "addressLocality":"Bad Lauchstädt",
+    "postalCode":"06246",
+    "addressCountry":"DE"
+  },
+  "areaServed":"Saalekreis",
+  "priceRange":"€€"
+}
+</script>
 <style>
 :root{
   --green:#1f3d2b;
@@ -230,6 +252,9 @@ footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top
 .cookie-btn{border:none;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer}
 .cookie-accept{background:var(--green);color:#fff}
 .cookie-decline{background:#ececec;color:#222}
+@media(prefers-reduced-motion:reduce){
+  *{-webkit-transition:none!important;transition:none!important;-webkit-animation:none!important;animation:none!important;scroll-behavior:auto!important;}
+}
 .note{font-size:14px;color:var(--muted)}
 @media (max-width:860px){
   .hero h2{font-size:38px}
@@ -276,6 +301,7 @@ footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top
 </button>
 
 <header>
+  <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Baumpflege Zwarg – Fachbetrieb für Baumpflege, Baumfällung und Baumkontrolle im Saalekreis</h1>
   <div class="header-inner">
     <picture style="display:block;line-height:0;">
       <source srcset="logo/logo.webp" type="image/webp">
@@ -363,14 +389,14 @@ footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top
     <div class="offer">
       <h3 style="color:#fff">Kostenlose Angebotsanfrage</h3>
       <p class="section-intro" style="color:rgba(255,255,255,.92)">Dieses Formular öffnet das E-Mail-Programm des Besuchers. Damit werden keine Formulardaten auf dieser Website gespeichert. Beschreiben Sie möglichst Baumart, Höhe, Standort und ob ein Sturmschaden vorliegt.</p>
-      <form class="form" action="mailto:baumpflegezwarg@gmail.com" method="post" enctype="text/plain">
+      <form class="form" action="mailto:baumpflegezwarg@gmail.com" method="post" enctype="text/plain" novalidate>
         <div class="form-grid">
-          <input type="text" name="Name" placeholder="Ihr Name" required>
-          <input type="tel" name="Telefon" placeholder="Telefonnummer" required>
+          <div><label for="f-name" style="display:block;color:#fff;font-size:13px;margin-bottom:4px;">Ihr Name *</label><input id="f-name" type="text" name="Name" placeholder="Ihr Name" required autocomplete="name" aria-required="true"></div>
+          <div><label for="f-tel" style="display:block;color:#fff;font-size:13px;margin-bottom:4px;">Telefonnummer *</label><input id="f-tel" type="tel" name="Telefon" placeholder="Telefonnummer" required autocomplete="tel" aria-required="true"></div>
         </div>
         <div class="form-grid">
-          <input type="email" name="E-Mail" placeholder="E-Mail-Adresse" required>
-          <select name="Leistung" required>
+          <div><label for="f-email" style="display:block;color:#fff;font-size:13px;margin-bottom:4px;">E-Mail-Adresse *</label><input id="f-email" type="email" name="E-Mail" placeholder="E-Mail-Adresse" required autocomplete="email" aria-required="true"></div>
+          <div><label for="f-leistung" style="display:block;color:#fff;font-size:13px;margin-bottom:4px;">Leistung *</label><select id="f-leistung" name="Leistung" required aria-required="true">
             <option value="" disabled selected>Leistung wählen</option>
             <option>Baumpflege</option>
             <option>Baumfällung</option>
@@ -378,11 +404,11 @@ footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top
             <option>Baumkontrolle</option>
             <option>Baumpflanzung</option>
             <option>Stubbenfräsen</option>
-          </select>
+          </select></div>
         </div>
-        <textarea name="Nachricht" placeholder="Beschreiben Sie Ihr Anliegen" required></textarea>
+        <div><label for="f-nachricht" style="display:block;color:#fff;font-size:13px;margin-bottom:4px;">Ihre Nachricht *</label><textarea id="f-nachricht" name="Nachricht" placeholder="Beschreiben Sie Ihr Anliegen" required aria-required="true"></textarea></div>
         <label class="consent">
-          <input type="checkbox" required>
+          <input type="checkbox" required aria-required="true">
           <span>Ich habe die <a href="datenschutz.html" style="color:#fff;text-decoration:underline;">Datenschutzerklärung</a> zur Kenntnis genommen und bin mit der Kontaktaufnahme zur Bearbeitung meiner Anfrage einverstanden.</span>
         </label>
         <button type="submit">Anfrage per E-Mail vorbereiten</button>
@@ -504,7 +530,9 @@ window.addEventListener('load', function(){ window.scrollTo(0, 0); });
   }
 
   try{
-    if(!localStorage.getItem(key)){ showBanner(); }
+    var stored = localStorage.getItem(key);
+    if(!stored){ showBanner(); }
+    else if(stored === 'yes'){ if(typeof loadMap === 'function'){ loadMap(); } }
   }catch(e){ showBanner(); }
 
   acceptBtn.addEventListener('click', function(){
