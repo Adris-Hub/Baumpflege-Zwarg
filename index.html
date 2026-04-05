@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="logo/logo.png">
+<link rel="preload" as="image" href="logo/logo.webp" type="image/webp">
 <meta property="og:title" content="Baumpflege Zwarg | Baumpflege, Baumfällung & Baumkontrolle im Saalekreis">
 <meta property="og:description" content="Fachbetrieb für Baumpflege, Baumfällung, Baumkontrolle und Sturmschäden in Bad Lauchstädt und im Saalekreis. Kostenlose Besichtigung vor Ort.">
 <meta property="og:image" content="https://adris-hub.github.io/Baumpflege-Zwarg/arbeitsbilder/arbeit1.jpg">
@@ -272,7 +273,10 @@ footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top
 
 <header>
   <div class="header-inner">
-    <img src="logo/logo.png" alt="Logo Baumpflege Zwarg" class="logo">
+    <picture>
+      <source srcset="logo/logo.webp" type="image/webp">
+      <img src="logo/logo.png" alt="Logo Baumpflege Zwarg" class="logo">
+    </picture>
   </div>
 </header>
 
