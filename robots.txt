@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://adris-hub.github.io/Baumpflege-Zwarg/sitemap.xml
+Sitemap: https://baumpflege-zwarg.de/sitemap.xml
