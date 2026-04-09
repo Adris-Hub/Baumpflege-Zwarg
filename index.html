@@ -10,6 +10,7 @@
 <meta name="google-site-verification" content="2i43ZOK0yPO6ms3k7zTd9EcCNxlxu2L-GkThZo8th5I">
 <link rel="icon" type="image/png" href="logo/logo.png">
 <link rel="preload" as="image" href="logo/logo.webp" type="image/webp">
+<link rel="stylesheet" href="style.css">
 <meta property="og:title" content="Baumpflege Zwarg | Baumpflege, Baumfällung & Baumkontrolle im Saalekreis">
 <meta property="og:description" content="Fachbetrieb für Baumpflege, Baumfällung, Baumkontrolle und Sturmschäden in Bad Lauchstädt und im Saalekreis. Kostenlose Besichtigung vor Ort.">
 <meta property="og:image" content="https://baumpflege-zwarg.de/arbeitsbilder/arbeit1.jpg">
@@ -39,45 +40,10 @@
 }
 </script>
 <style>
-:root{
-  color-scheme:light;
-  --green:#1f3d2b;
-  --green-2:#163322;
-  --green-3:#2a5a3f;
-  --light:#f4f6f5;
-  --soft:#e8efe9;
-  --text:#222;
-  --muted:#5d6a63;
-  --white:#fff;
-  --red:#b7332a;
-  --shadow:0 10px 28px rgba(0,0,0,.08);
-  --radius:18px;
-  --max:1150px;
-}
-*{box-sizing:border-box}
-html{-webkit-scroll-behavior:smooth;scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
-  background:var(--light);
-  color:var(--text);
-  line-height:1.6;
-}
-img{max-width:100%;display:block}
-a{color:inherit}
 .skip-link{
   position:absolute;left:-9999px;top:0;background:#fff;color:#000;padding:10px 14px;z-index:999;
 }
 .skip-link:focus{left:10px;top:10px}
-.topbar{
-  background:var(--red);
-  color:#fff;
-  text-align:center;
-  padding:12px 16px;
-  font-weight:700;
-  font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
-  position:relative;z-index:10;
-}
 header{
   background:none;
   color:#fff;
@@ -231,12 +197,6 @@ main{display:block}
   margin-top:22px;padding:20px;background:var(--soft);border-radius:16px;text-align:left;
 }
 .map-card p{margin:0 0 12px}
-.legal-wrap{display:grid;gap:24px}
-.legal-box h4{margin-top:0;color:var(--green)}
-footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top:20px}
-.footer-links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:12px}
-.footer-links a{color:#fff}
-.small{font-size:14px;opacity:.92}
 .whatsapp{
   position:fixed;right:18px;bottom:18px;background:#25D366;color:#fff;padding:14px 18px;border-radius:999px;
   font-weight:700;box-shadow:var(--shadow);text-decoration:none;z-index:19;
@@ -286,10 +246,10 @@ footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top
   <div class="nav-inner">
     <div class="nav-links" id="navLinks">
       <a href="#start">Start</a>
-      <a href="#zertifikate">Zertifikate</a>
       <a href="#leistungen">Leistungen</a>
-      <a href="#arbeiten">Arbeitsbilder</a>
       <a href="#angebot">Anfrage</a>
+      <a href="#zertifikate">Zertifikate</a>
+      <a href="#arbeiten">Arbeitsbilder</a>
       <a href="#kontakt">Kontakt</a>
     </div>
   </div>
@@ -331,28 +291,6 @@ footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top
     </div>
   </section>
 
-  <section class="section" id="zertifikate">
-    <h3>Zertifizierter Fachbetrieb</h3>
-    
-    <div class="grid badges">
-      <div class="badge">
-        <picture><source srcset="zertifikate/etw%20zertifikat.webp" type="image/webp"><img src="zertifikate/etw%20zertifikat.jpg" alt="European Tree Worker Zertifikat" loading="lazy"></picture>
-        <strong>European Tree Worker</strong>
-        <a href="zertifikate/etw%20zertifikat.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:10px;padding:8px 16px;background:var(--green);color:#fff;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;">PDF ansehen</a>
-      </div>
-      <div class="badge">
-        <picture><source srcset="zertifikate/Fll%20Baumkontrolleur%20zertifikat.webp" type="image/webp"><img src="zertifikate/Fll%20Baumkontrolleur%20zertifikat.jpg" alt="FLL Zertifikat" loading="lazy"></picture>
-        <strong>FLL-zertifizierter Baumkontrolleur</strong>
-        <a href="zertifikate/Fll%20Baumkontrolleur%20zertifikat.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:10px;padding:8px 16px;background:var(--green);color:#fff;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;">PDF ansehen</a>
-      </div>
-      <div class="badge">
-        <picture><source srcset="zertifikate/Skt%20B%20Zertifikat.webp" type="image/webp"><img src="zertifikate/Skt%20B%20Zertifikat.jpg" alt="SKT-B Zertifikat" loading="lazy"></picture>
-        <strong>Seilklettertechnik SKT-B</strong>
-        <a href="zertifikate/Skt%20B%20Zertifikat.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:10px;padding:8px 16px;background:var(--green);color:#fff;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;">PDF ansehen</a>
-      </div>
-    </div>
-  </section>
-
   <section class="section" id="leistungen">
     <h3>Leistungen</h3>
     <p class="section-intro">Fachgerecht, sicher und sauber ausgeführt – für Einzelaufträge, laufende Pflege und akute Schadenslagen.</p>
@@ -363,24 +301,6 @@ footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top
       <div class="card"><h4>Baumkontrolle</h4><p>Fachkundige Kontrolle zur Einschätzung von Stand- und Bruchsicherheit sowie notwendigem Pflegebedarf.</p></div>
       <div class="card"><h4>Baumpflanzung</h4><p>Standortgerechte Pflanzung mit Blick auf Entwicklung, Pflege und nachhaltigen Anwuchserfolg.</p></div>
       <div class="card"><h4>Stubbenfräsen</h4><p>Saubere Entfernung von Wurzelstöcken und Vorbereitung der Fläche für die weitere Nutzung.</p></div>
-    </div>
-  </section>
-
-  
-
-  <section class="section" id="arbeiten">
-    <h3>Arbeitsbilder</h3>
-    
-    <div class="grid gallery">
-      <picture><source srcset="arbeitsbilder/arbeit1.webp" type="image/webp"><img src="arbeitsbilder/arbeit1.jpg" alt="Arbeitsbild Baumpflege 1" loading="lazy" width="750" height="1000"></picture>
-      <picture><source srcset="arbeitsbilder/arbeit2.webp" type="image/webp"><img src="arbeitsbilder/arbeit2.jpg" alt="Arbeitsbild Baumpflege 2" loading="lazy" width="562" height="1000"></picture>
-      <picture><source srcset="arbeitsbilder/arbeit3.webp" type="image/webp"><img src="arbeitsbilder/arbeit3.jpg" alt="Arbeitsbild Baumpflege 3" loading="lazy" width="562" height="1000"></picture>
-      <picture><source srcset="arbeitsbilder/arbeit4.webp" type="image/webp"><img src="arbeitsbilder/arbeit4.jpg" alt="Arbeitsbild Baumpflege 4" loading="lazy" width="750" height="1000" style="object-position:center 20%"></picture>
-      <picture><source srcset="arbeitsbilder/arbeit5.webp" type="image/webp"><img src="arbeitsbilder/arbeit5.jpg" alt="Arbeitsbild Baumpflege 5" loading="lazy" width="750" height="1000"></picture>
-      <picture><source srcset="arbeitsbilder/arbeit6.webp" type="image/webp"><img src="arbeitsbilder/arbeit6.jpg" alt="Arbeitsbild Baumpflege 6" loading="lazy" width="750" height="1000"></picture>
-      <picture><source srcset="arbeitsbilder/arbeit7.webp" type="image/webp"><img src="arbeitsbilder/arbeit7.jpg" alt="Arbeitsbild Baumpflege 7" loading="lazy" width="750" height="1000" style="object-position:center 20%"></picture>
-      <picture><source srcset="arbeitsbilder/arbeit8.webp" type="image/webp"><img src="arbeitsbilder/arbeit8.jpg" alt="Arbeitsbild Baumpflege 8" loading="lazy" width="562" height="1000"></picture>
-      <picture><source srcset="arbeitsbilder/arbeit9.webp" type="image/webp"><img src="arbeitsbilder/arbeit9.jpg" alt="Arbeitsbild Baumpflege 9" loading="lazy" width="562" height="1000"></picture>
     </div>
   </section>
 
@@ -412,7 +332,45 @@ footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top
         </label>
         <button type="submit">Anfrage per E-Mail vorbereiten</button>
       </form>
-      
+
+    </div>
+  </section>
+
+  <section class="section" id="zertifikate">
+    <h3>Zertifizierter Fachbetrieb</h3>
+
+    <div class="grid badges">
+      <div class="badge">
+        <picture><source srcset="zertifikate/etw%20zertifikat.webp" type="image/webp"><img src="zertifikate/etw%20zertifikat.jpg" alt="European Tree Worker Zertifikat" loading="lazy"></picture>
+        <strong>European Tree Worker</strong>
+        <a href="zertifikate/etw%20zertifikat.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:10px;padding:8px 16px;background:var(--green);color:#fff;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;">PDF ansehen</a>
+      </div>
+      <div class="badge">
+        <picture><source srcset="zertifikate/Fll%20Baumkontrolleur%20zertifikat.webp" type="image/webp"><img src="zertifikate/Fll%20Baumkontrolleur%20zertifikat.jpg" alt="FLL Zertifikat" loading="lazy"></picture>
+        <strong>FLL-zertifizierter Baumkontrolleur</strong>
+        <a href="zertifikate/Fll%20Baumkontrolleur%20zertifikat.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:10px;padding:8px 16px;background:var(--green);color:#fff;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;">PDF ansehen</a>
+      </div>
+      <div class="badge">
+        <picture><source srcset="zertifikate/Skt%20B%20Zertifikat.webp" type="image/webp"><img src="zertifikate/Skt%20B%20Zertifikat.jpg" alt="SKT-B Zertifikat" loading="lazy"></picture>
+        <strong>Seilklettertechnik SKT-B</strong>
+        <a href="zertifikate/Skt%20B%20Zertifikat.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:10px;padding:8px 16px;background:var(--green);color:#fff;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;">PDF ansehen</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="arbeiten">
+    <h3>Arbeitsbilder</h3>
+
+    <div class="grid gallery">
+      <picture><source srcset="arbeitsbilder/arbeit1.webp" type="image/webp"><img src="arbeitsbilder/arbeit1.jpg" alt="Arbeitsbild Baumpflege 1" loading="lazy" width="750" height="1000"></picture>
+      <picture><source srcset="arbeitsbilder/arbeit2.webp" type="image/webp"><img src="arbeitsbilder/arbeit2.jpg" alt="Arbeitsbild Baumpflege 2" loading="lazy" width="562" height="1000"></picture>
+      <picture><source srcset="arbeitsbilder/arbeit3.webp" type="image/webp"><img src="arbeitsbilder/arbeit3.jpg" alt="Arbeitsbild Baumpflege 3" loading="lazy" width="562" height="1000"></picture>
+      <picture><source srcset="arbeitsbilder/arbeit4.webp" type="image/webp"><img src="arbeitsbilder/arbeit4.jpg" alt="Arbeitsbild Baumpflege 4" loading="lazy" width="750" height="1000" style="object-position:center 20%"></picture>
+      <picture><source srcset="arbeitsbilder/arbeit5.webp" type="image/webp"><img src="arbeitsbilder/arbeit5.jpg" alt="Arbeitsbild Baumpflege 5" loading="lazy" width="750" height="1000"></picture>
+      <picture><source srcset="arbeitsbilder/arbeit6.webp" type="image/webp"><img src="arbeitsbilder/arbeit6.jpg" alt="Arbeitsbild Baumpflege 6" loading="lazy" width="750" height="1000"></picture>
+      <picture><source srcset="arbeitsbilder/arbeit7.webp" type="image/webp"><img src="arbeitsbilder/arbeit7.jpg" alt="Arbeitsbild Baumpflege 7" loading="lazy" width="750" height="1000" style="object-position:center 20%"></picture>
+      <picture><source srcset="arbeitsbilder/arbeit8.webp" type="image/webp"><img src="arbeitsbilder/arbeit8.jpg" alt="Arbeitsbild Baumpflege 8" loading="lazy" width="562" height="1000"></picture>
+      <picture><source srcset="arbeitsbilder/arbeit9.webp" type="image/webp"><img src="arbeitsbilder/arbeit9.jpg" alt="Arbeitsbild Baumpflege 9" loading="lazy" width="562" height="1000"></picture>
     </div>
   </section>
 
@@ -443,7 +401,7 @@ footer{background:#222;color:#fff;text-align:center;padding:30px 20px;margin-top
 <section class="section" id="bewertungen" style="text-align:center;">
 <h3>Kundenbewertungen</h3>
 <p>Echte Bewertungen finden Sie direkt auf unserem Google-Unternehmensprofil.</p>
-<a href="https://www.google.com/search?sca_esv=a640d412492df4ff&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-_0IujsZetP8z619LoryEzXSsabkJJwIrgJyBorwncq3dqD3iQw0maqWwI7-T3LSS2uL7qJ596vEEMz_-vXqE5J-P0JXbVzH4X-GwVfd8b9lVOn00-Vlnrc97lr_Ks_hfzXBzkL1anZLT86JYI0cKwt8on6A&q=Baumpflege+Zwarg+Rezensionen&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOTypV0yCNcSNTMoRX2VJE-o-zsZSCK49R4Vz_E9nFZ0MTJIy5HdDteGJ18_i6AGpQMu2f_0fR-meNKJ0jUHVRQdPE_T7cijfOqC439NZOn0cAxUUdw%3D%3D&hl=de-DE" target="_blank" style="display:inline-block;margin-top:10px;padding:12px 18px;background:#1f3d2b;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">
+<a href="https://share.google/2uRwBHmrRXOEMZ93R" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:10px;padding:12px 18px;background:#1f3d2b;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">
 Google Bewertungen ansehen
 </a>
 </section>
